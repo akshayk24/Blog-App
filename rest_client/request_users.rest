@@ -1,0 +1,64 @@
+# url is fetched from .vscode/settings.json
+
+POST {{url}}/api/users/signup
+Content-Type: : application/json
+
+{
+	"emailId":"test4.3@g.com",
+	"password":"Password@123",
+	"firstName":"Johnny",
+	"lastName":"Doe",
+	"bio":""
+}
+###
+
+POST {{url}}/api/users/login
+Content-Type: application/json
+
+{
+	"emailId":"test4.3@g.com",
+	"password":"Password@123"
+}
+###
+
+# GetUser API
+POST {{url}}/api/users/getUser
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{
+    "userId": 3
+}
+###
+
+POST {{url}}/api/users/getAllUsers
+Content-Type: application/json
+Authorization: : Token {{token}}
+
+{}
+###
+
+POST {{url}}/api/users/updateUser
+Content-Type: application/json
+Authorization: : Token {{token}}
+
+{
+	"userId":7,
+	"update_params":{
+	"password": "password@123",
+	"firstName": "Janeee",
+	"lastName":"Doe",
+	"bio": "I'm jane doe"
+	}
+}
+###
+
+POST {{url}}/api/users/deactivateUser
+Content-Type: application/json
+Authorization: : Token {{token}}
+
+{
+	"userId": 7
+}
+###
+

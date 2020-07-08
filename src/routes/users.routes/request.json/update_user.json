@@ -1,0 +1,9 @@
+{
+    "userId": 5,
+    "update_params": {
+        "password": "password@123",
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "bio": "I am jane doe"
+    }
+}

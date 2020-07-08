@@ -1,0 +1,83 @@
+POST {{url}}/api/posts/createPost
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{
+	"userId":3,
+	"post_params":{
+	"categoryId": 1,
+	"title": "Title 1.1.1",
+	"description":"Description 1.1.1"
+	}
+}
+###
+
+POST {{url}}/api/posts/getPost
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{
+    "postId": 3
+}
+###
+
+POST  {{url}}/api/posts/getAllPosts
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{
+    "categoryId": 1
+}
+###
+
+POST {{url}}/api/posts/deletePost
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{
+    "postId": 3
+}
+###
+
+POST  {{url}}/api/posts/addPostToFavourities
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{
+    "postId": 1
+}
+###
+
+POST {{url}}/api/posts/addPostToReadLater
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{
+    "postId": 1
+}
+###
+
+POST {{url}}/api/posts/updatePost
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{
+    "postId": 3,
+    "title": "EditedTitle1.1",
+    "description": "EditedDescriprtion1.1.1.1"
+}
+###
+
+POST {{url}}/api/posts/getAllFavouritePosts
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{}
+###
+
+POST {{url}}/api/posts/getAllReadLaterPosts
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{}
+###
